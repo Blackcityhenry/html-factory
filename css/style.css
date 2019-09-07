@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One&display=swap');
+
 html{
   overflow-y: auto;
+}
+
+textarea{
+  font-family: monospace, mono;
+}
+
+.site-title{
+  font-family: 'Unica One', cursive;
+  font-size: 3.125rem;
 }

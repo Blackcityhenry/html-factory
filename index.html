@@ -5,6 +5,7 @@
   <title>HTML Factory</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" integrity="sha256-pDcK9eD3CHRmrOhlHdlr87HvMWbmpvtjNsVyhCjlU38=" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.jpg">
 </head>
 <body>
   <div id="app">
@@ -12,11 +13,11 @@
       <v-container dark fluid fill-height>
         <v-row justify="center">
           <v-col lg="9">
-            <div class="text-center display-2 mb-4">
+            <div class="text-center mb-4 site-title yellow--text">
               HTML-Factory
             </div>
             <v-card outlined class="pa-5">
-              <v-textarea id="input-target" label="Paste your HTML Here" color="yellow" rows="30" no-resize v-model="input"></v-textarea>
+              <v-textarea id="input-target" class="yellow--text" label="Paste your HTML Here" color="yellow" rows="30" no-resize v-model="input"></v-textarea>
               <v-card-actions>
                 <v-select label="Pick your actions" multiple v-model="actions" :items="options" chips width="300" color="yellow" item-color="yellow"></v-select>
                 <v-spacer></v-spacer>
