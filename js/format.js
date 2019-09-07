@@ -18,7 +18,7 @@ var format = new Vue(
     },
     methods: {
       format() {
-        if( this.input == null ){
+        if( !this.input.length ){
           this.emptySnack = true
         }
         else if ( !this.actions.length ){
