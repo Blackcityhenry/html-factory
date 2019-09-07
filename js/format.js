@@ -21,7 +21,7 @@ var format = new Vue(
         if( this.input == null ){
           this.emptySnack = true
         }
-        else if ( this.actions == null ){
+        else if ( !this.actions.length ){
           this.noactSnack = true
         }
         else {
