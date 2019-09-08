@@ -19,7 +19,7 @@
             <v-card outlined class="pa-5">
               <v-textarea id="input-target" class="yellow--text" label="Paste your HTML Here" color="yellow" rows="30" no-resize v-model="input"></v-textarea>
               <v-card-actions>
-                <v-select label="Pick your actions" multiple v-model="actions" :items="options" chips width="300" color="yellow" item-color="yellow"></v-select>
+                <v-select label="Pick your actions" multiple v-model="actions" :items="options" chips width="300" color="yellow" item-color="yellow" menu-props="offsetY"></v-select>
                 <v-spacer></v-spacer>
                 <v-btn icon fab class="yellow js-clip grey--text text--darken-2" data-clipboard-target="#input-target" @click="format">
                   <v-icon>mdi-clipboard-text-outline</v-icon>
