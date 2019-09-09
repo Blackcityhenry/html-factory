@@ -30,8 +30,9 @@ var format = new Vue(
           }
 
           if ( this.actions.includes('minify') ){
-            this.input = this.input.replace(/\s{2,}/g,' ')
             this.input = this.input.replace(/\n/g,'')
+            this.input = this.input.replace(/\s{2,}/g,' ')
+            this.input = this.input.replace(/>\s+</g,'><')
           }
 
           this.doneSnack = true
