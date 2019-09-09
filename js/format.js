@@ -10,7 +10,7 @@ var format = new Vue(
     ),
     data: {
       input: '',
-      actions: '',
+      actions: [],
       options: ['minify', 'encoding'],
       doneSnack: false,
       emptySnack: false,
