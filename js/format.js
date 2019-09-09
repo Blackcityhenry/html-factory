@@ -9,8 +9,8 @@ var format = new Vue(
       }
     ),
     data: {
-      input: null,
-      actions: null,
+      input: '',
+      actions: '',
       options: ['minify', 'encoding'],
       doneSnack: false,
       emptySnack: false,
