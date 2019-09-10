@@ -11,4 +11,19 @@ textarea{
 .site-title{
   font-family: 'Unica One', cursive;
   font-size: 3.125rem;
+  text-shadow: 2px 2px 0px #111,
+               3px 3px 0px #111,
+               4px 4px 0px #111,
+               5px 5px 0px #111,
+               6px 6px 0px #111,
+               7px 7px 0px #111,
+               8px 8px 0px #111,
+               9px 9px 0px #111,
+               10px 10px 0px #111,
+               11px 11px 0px #111,
+               12px 12px 0px #111,
+               13px 13px 0px #111,
+               14px 14px 0px #111,
+               15px 15px 0px #111,
+               16px 16px 0px #111;
 }
