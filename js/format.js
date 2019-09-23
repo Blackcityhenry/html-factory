@@ -11,7 +11,7 @@ var format = new Vue(
     data: {
       input: '',
       actions: [],
-      options: ['minify', 'encoding'],
+      options: ['minify', 'encoding','indent'],
       doneSnack: false,
       emptySnack: false,
       noactSnack: false
@@ -33,6 +33,27 @@ var format = new Vue(
             this.input = this.input.replace(/\n/g,'')
             this.input = this.input.replace(/\s{2,}/g,' ')
             this.input = this.input.replace(/>\s+</g,'><')
+          }
+
+          if ( this.actions.includes('indent') ){
+            var row = this.input.split(/\n/g)
+            var space = []
+            for (var i = 0, n = 0; i < row.length; i++){
+              if ( /^\s*$/.test(row[i]) ) {
+                continue
+              }
+              space[n] = row[i].match(/^\s*/)
+              space[n] = space[n][0].length
+              n++
+            }
+            var min = Math.min(...space)
+            var regex = new RegExp('^\\s{'+ min +'}', 'g')
+
+            for (var i = 0; i < row.length; i++){
+              row[i] = row[i].replace(regex , '')
+            }
+
+            this.input = row.join('\n')
           }
 
           this.doneSnack = true
