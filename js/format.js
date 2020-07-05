@@ -73,8 +73,8 @@ var format = new Vue(
     },
     mounted(){
       window.addEventListener('keyup', function(event) {
-        if (event.ctrlKey && event.keyCode == 13) {
-          console.error('fired ctrl');
+        if ((event.ctrlKey || event.keyCode == 17) && (event.keyCode == 10 || event.keyCode == 13)) {
+          format.format();
         }
       });
     }
