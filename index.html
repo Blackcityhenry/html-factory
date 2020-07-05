@@ -10,7 +10,7 @@
 <body>
   <div id="app">
     <v-app>
-      <v-container dark fluid fill-height>
+      <v-container dark fluid fill-height @keyup.ctrl.enter="format">
         <v-row justify="center">
           <v-col lg="9">
             <div class="text-center mb-4 site-title yellow--text">
@@ -21,7 +21,7 @@
               <v-card-actions>
                 <v-select label="Pick your actions" multiple v-model="actions" :items="options" chips width="300" color="yellow" item-color="yellow" menu-props="offsetY"></v-select>
                 <v-spacer></v-spacer>
-                <v-btn icon fab class="yellow js-clip grey--text text--darken-2" data-clipboard-target="#input-target" @click="format" @keyup.ctrl.y="noactSnack = true">
+                <v-btn icon fab class="yellow js-clip grey--text text--darken-2" data-clipboard-target="#input-target" @click="format">
                   <v-icon>mdi-clipboard-text-outline</v-icon>
                 </v-btn>
               </v-card-actions>
