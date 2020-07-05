@@ -56,11 +56,27 @@ var format = new Vue(
             this.input = row.join('\n')
           }
 
-          this.doneSnack = true
+          this.copyToClipboard();
         }
+      },
+      copyToClipboard(){
+        var target = this.$refs.inputText.$el.querySelector('textarea');
+
+        target.value = this.input;
+
+        target.select();
+
+        document.execCommand("copy");
+
+        this.doneSnack = true
       }
+    },
+    mounted(){
+      window.addEventListener('keyup', function(event) {
+        if (event.ctrlKey && event.keyCode == 13) {
+          console.error('fired ctrl');
+        }
+      });
     }
   }
 )
-
-new ClipboardJS('.js-clip');
